@@ -3,7 +3,7 @@
     {{#router}}
     <router-view></router-view>
     {{else}}
-    <HelloWorld></HelloWorld>
+    <Home></Home>
     {{/router}}
   </div>
 </template>
