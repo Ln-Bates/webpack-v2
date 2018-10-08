@@ -1,33 +1,22 @@
 <template>
   <div id="app">
     {{#router}}
-    <router-view/>
+    <router-view></router-view>
     {{else}}
-    <HelloWorld/>
+    <HelloWorld></HelloWorld>
     {{/router}}
   </div>
 </template>
 
 <script>
 {{#unless router}}
-import HelloWorld from './components/HelloWorld'
+import Home from './pages/Home'
 
 {{/unless}}
 export default {
   name: 'App'{{#router}}{{else}},
   components: {
-    HelloWorld
+    Home
   }{{/router}}
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

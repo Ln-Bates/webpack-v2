@@ -4,6 +4,8 @@
 {{/if_eq}}
 import Vue from 'vue'
 import App from './App'
+import VueAxios from 'vue-axios'
+import Axios from 'axios'
 {{#router}}
 import router from './router'
 {{/router}}
@@ -11,6 +13,7 @@ import router from './router'
 import store from './store'
 {{/vuex}}
 
+Vue.use(VueAxios, Axios)
 import './assets/css/app.scss'
 
 Vue.config.productionTip = false
