@@ -6,8 +6,12 @@ import Vue from 'vue'
 import App from './App'
 {{#router}}
 import router from './router'
-import store from './store'
 {{/router}}
+{{#vuex}}
+import store from './store'
+{{/vuex}}
+
+import './assets/css/app.scss'
 
 Vue.config.productionTip = false
 
