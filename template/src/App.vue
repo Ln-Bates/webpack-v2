@@ -1,11 +1,11 @@
 <template>
-  <div id="app">
+<div id="app">
     {{#router}}
     <router-view></router-view>
     {{else}}
     <Home></Home>
     {{/router}}
-  </div>
+</div>
 </template>
 
 <script>
@@ -14,9 +14,9 @@ import Home from './pages/Home'
 
 {{/unless}}
 export default {
-  name: 'App'{{#router}}{{else}},
-  components: {
-    Home
-  }{{/router}}
+    name: 'App'{{#router}}{{else}},
+    components: {
+        Home
+    }{{/router}}
 }
 </script>
