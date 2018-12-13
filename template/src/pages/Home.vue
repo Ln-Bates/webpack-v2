@@ -1,20 +1,22 @@
 <template>
     <div class="home-page">
-        <HelloWorld></HelloWorld>
+        <Loading v-show="showLoading"></Loading>
     </div>
 </template>
 
 <script>
-    import HelloWorld from '@/components/HelloWorld';
+    import Loading from '@/components/Loading';
 
     export default {
         mounted() {
         },
         data() {
-            return {}
+            return {
+                showLoading: true
+            }
         },
         components: {
-            HelloWorld
+            Loading
         }
     }
 </script>
