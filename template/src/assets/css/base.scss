@@ -1,0 +1,41 @@
+%ellipsis-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin middle($top:50%) {
+    top: $top;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin bgSize($width,$height) {
+    width: $width;
+    height: $height;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+@mixin flex($align:center, $justify:space-between) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+.spa-hidden {
+    height: 100%;
+    overflow: hidden;
+
+    body {
+        @extend .spa-hidden;
+    }
+}
